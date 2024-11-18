@@ -3,7 +3,7 @@ import axios from 'axios';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
-const Invoice = () => {
+const InvoiceReport = () => {
   const [order, setOrder] = useState(null);
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -136,4 +136,4 @@ const Invoice = () => {
   );
 };
 
-export default Invoice;
+export default InvoiceReport;

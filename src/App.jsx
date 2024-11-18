@@ -19,7 +19,8 @@ import CategoryPage from './Pages/userPages/CategoryPage.jsx'
 import CouponManager from './Pages/CouponManager.jsx'
 import Portfolio from './Pages/portfolio.jsx'
 import NotFoundPage from './Pages/userPages/NotFoundPage.jsx'
-import Invoice from './Pages/userPages/invoice.jsx'
+import Invoice from './Pages/userPages/InvoiceReport.jsx'
+
 function App() {
 
     return (
