@@ -16,10 +16,10 @@ import PaymentSuccess from './Pages/userPages/PaymentSuccess.jsx'
 import UpdateUser from './Pages/updateUser.jsx'
 import UserOrderTracking from './Pages/userPages/UserOrderTracking.jsx'
 import CategoryPage from './Pages/userPages/CategoryPage.jsx'
-import Invoice from './Pages/userPages/invoice.jsx'
 import CouponManager from './Pages/CouponManager.jsx'
 import Portfolio from './Pages/portfolio.jsx'
 import NotFoundPage from './Pages/userPages/NotFoundPage.jsx'
+import Invoice from './Pages/userPages/invoice.jsx'
 function App() {
 
     return (
@@ -33,7 +33,7 @@ function App() {
                 <Route path='/ShopCart' element={<ShoppingCart />} />
                 <Route path='/ProductStore' element={<ProductStore />} />
                 <Route path='/updateUser/:id' element={<UpdateUser />} />
-                <Route path='/Invoice/:id' element={<Invoice />} />
+                <Route path='/Invoice/:id' element={<Invoice/>} />
                 <Route path='/portfolio' element={<Portfolio />} />
 
 
