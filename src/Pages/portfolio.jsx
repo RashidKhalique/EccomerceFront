@@ -16,7 +16,7 @@ const Portfolio = () => {
      <header className="flex justify-between items-center p-4 md:px-12 bg-white shadow-md">
                 <h1 className="text-2xl font-bold text-gray-900">
                     <img
-                        src="./public/Logo's/white-bg-logo.png"
+                        src="/Logo's/white-bg-logo.png"
                         alt="Logo"
                         className="w-40 h-20 object-cover rounded-full shadow-lg"
                     />
@@ -156,7 +156,7 @@ const Portfolio = () => {
         {/* Portfolio Item 1 */}
         <div className="relative group">
             <img
-                src="./public/website/alqasimenterprises-co.png"
+                src=" /website/alqasimenterprises-co.png"
                 alt="Project 1"
                 className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform transform group-hover:scale-105"
             />
@@ -173,7 +173,7 @@ const Portfolio = () => {
         {/* Portfolio Item 2 */}
         <div className="relative group">
             <img
-                src="./public/website/alineperfectclean-designexus-io.png"
+                src=" /website/alineperfectclean-designexus-io.png"
                 alt="Project 2"
                 className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform transform group-hover:scale-105"
             />
@@ -190,7 +190,7 @@ const Portfolio = () => {
         {/* Portfolio Item 3 */}
         <div className="relative group">
             <img
-                src="./public/website/xford-pk.png"
+                src=" /website/xford-pk.png"
                 alt="Project 3"
                 className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform transform group-hover:scale-105"
             />
@@ -207,7 +207,7 @@ const Portfolio = () => {
         {/* Portfolio Item 4 */}
         <div className="relative group">
             <img
-                src="./public/website/beta-burhanistudios.png"  // Replace with actual project image
+                src=" /website/beta-burhanistudios.png"  // Replace with actual project image
                 alt="Project 4"
                 className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform transform group-hover:scale-105"
             />
@@ -224,7 +224,7 @@ const Portfolio = () => {
         {/* Portfolio Item 5 */}
         <div className="relative group">
             <img
-                src="./public/website/gsuk-org.png"  // Replace with actual project image
+                src=" /website/gsuk-org.png"  // Replace with actual project image
                 alt="Project 5"
                 className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform transform group-hover:scale-105"
             />
@@ -241,7 +241,7 @@ const Portfolio = () => {
         {/* Portfolio Item 6 */}
         <div className="relative group">
             <img
-                src="./public/website/omegaleadgen.png"  // Replace with actual project image
+                src=" /website/omegaleadgen.png"  // Replace with actual project image
                 alt="Project 6"
                 className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform transform group-hover:scale-105"
             />
@@ -258,7 +258,7 @@ const Portfolio = () => {
         {/* Portfolio Item 7 */}
         <div className="relative group">
             <img
-                src="./public/website/amsterdamsematrassencentrale-nl.png"  // Replace with actual project image
+                src=" /website/amsterdamsematrassencentrale-nl.png"  // Replace with actual project image
                 alt="Project 7"
                 className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform transform group-hover:scale-105"
             />
@@ -275,7 +275,7 @@ const Portfolio = () => {
         {/* Portfolio Item 8 */}
         <div className="relative group">
             <img
-                src="./public/website/hajiyaqoobandsons.png"  // Replace with actual project image
+                src=" /website/hajiyaqoobandsons.png"  // Replace with actual project image
                 alt="Project 8"
                 className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform transform group-hover:scale-105"
             />
