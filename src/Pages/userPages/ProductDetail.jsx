@@ -26,8 +26,8 @@ const ProductDetail = () => {
         fetchProducts();
     }, []);
     const navigate = useNavigate();
-    const Addtocart = (product) => {
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const Addtocart = async (product) => {
+        const cart = localStorage.getItem('cart') || [];
         const productExists = cart.find((item) => item._id === product._id);
         if (!productExists) {
             cart.push(product); 
