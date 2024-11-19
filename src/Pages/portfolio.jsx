@@ -381,7 +381,7 @@ const Portfolio = () => {
             {/* Footer */}
             <footer className="bg-gray-800 text-white py-8">
                 <div className="text-center">
-                    <p className="text-sm">© 2024 Rashid Khalique. All Rights Reserved.</p>
+                    <p className="text-sm">© 2024 Rashid Khalique. All Rights Reserved By Client's.</p>
                     <div className="flex justify-center space-x-6 mt-4">
                         <a href="https://www.linkedin.com/in/rashid-web-developer/"target="_blank" className="text-white hover:text-gray-400">
                             <FaLinkedin />
