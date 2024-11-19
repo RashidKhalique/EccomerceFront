@@ -288,6 +288,21 @@ const Portfolio = () => {
                 </div>
             </div>
         </div>
+        <div className="relative group">
+            <img
+                src=" /website/Eccomercestore.png"  // Replace with actual project image
+                alt="Project 8"
+                className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform transform group-hover:scale-105"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="text-center text-white">
+                    <p className="text-lg font-semibold">MERN Eccomerce Store</p>
+                    <div className="mt-2">
+                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition"><a href="/">Visit Now</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
