@@ -1,19 +1,45 @@
 import React from 'react';
-import { FaMapMarkerAlt, FaEnvelope, FaLinkedin, FaGithub, FaTwitter, FaInstagram, FaFacebook } from 'react-icons/fa';
+import { useState } from 'react';
+import { FaMapMarkerAlt, FaEnvelope, FaLinkedin, FaGithub, FaTwitter, FaInstagram, FaFacebook,FaBars,FaTimes } from 'react-icons/fa';
 
 const Portfolio = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
+        
         <div className="font-sans">
-            {/* Header */}
-            <header className="flex justify-between items-center p-4 md:px-12 bg-white shadow-md">
-            <h1 className="text-2xl font-bold text-gray-900"><img src="./public/Logo's/white-bg-logo.png" alt=""   className="w-40 h-20 object-cover rounded-full shadow-lg"/></h1>
-                <nav className="hidden md:flex space-x-8 text-gray-700">
+     {/* Header */}
+     <header className="flex justify-between items-center p-4 md:px-12 bg-white shadow-md">
+                <h1 className="text-2xl font-bold text-gray-900">
+                    <img
+                        src="./public/Logo's/white-bg-logo.png"
+                        alt="Logo"
+                        className="w-40 h-20 object-cover rounded-full shadow-lg"
+                    />
+                </h1>
+
+                {/* Hamburger Icon */}
+                <button
+                    className="md:hidden text-2xl text-gray-900"
+                    onClick={toggleMenu}
+                >
+                    {isMenuOpen ? <FaTimes /> : <FaBars />}
+                </button>
+
+                {/* Navigation Links */}
+                <nav className={`md:flex space-x-8 text-gray-700 ${isMenuOpen ? 'block' : 'hidden'} md:block align-middle`}>
                     <a href="#home" className="hover:text-blue-600 transition-colors">Home</a>
                     <a href="#services" className="hover:text-blue-600 transition-colors">Services</a>
                     <a href="#portfolio" className="hover:text-blue-600 transition-colors">Portfolio</a>
                     <a href="#contact" className="hover:text-blue-600 transition-colors">Contact</a>
                 </nav>
-                <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">Contact Me</button>
+                
+                {/* Mobile contact button */}
+                <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors hidden md:block">Contact Me</button>
             </header>
 
             {/* Home Section */}
@@ -34,12 +60,12 @@ const Portfolio = () => {
                 </div>
             </section>
 
-  {/* Logo Section */}
-  <section className="bg-white py-12">
+            {/* Trusted By Section */}
+            <section className="bg-white py-12">
                 <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-gray-900">Trusted By</h3>
                 </div>
-                <div className="flex justify-center space-x-16">
+                <div className="flex flex-wrap justify-center space-x-8">
                     <img
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Upwork-logo.svg/2560px-Upwork-logo.svg.png"
                         alt="Upwork"
@@ -62,7 +88,6 @@ const Portfolio = () => {
                     />
                 </div>
             </section>
-
 
                   {/* About Me Section */}
                   <section className="p-12 bg-white">
