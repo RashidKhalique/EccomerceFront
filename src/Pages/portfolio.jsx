@@ -6,7 +6,7 @@ const Portfolio = () => {
         <div className="font-sans">
             {/* Header */}
             <header className="flex justify-between items-center p-4 md:px-12 bg-white shadow-md">
-                <h1 className="text-2xl font-bold text-gray-900">Cody</h1>
+                <h1 className="text-2xl font-bold text-gray-900"><img src="/public/logo.png" alt="" /></h1>
                 <nav className="hidden md:flex space-x-8 text-gray-700">
                     <a href="#home" className="hover:text-blue-600 transition-colors">Home</a>
                     <a href="#services" className="hover:text-blue-600 transition-colors">Services</a>
@@ -121,45 +121,155 @@ const Portfolio = () => {
     </div>
 </section>
 
+<section id="portfolio" className="py-16 bg-white">
+    <div className="text-center mb-12">
+        <h2 className="text-3xl font-semibold text-gray-900">My Portfolio</h2>
+    </div>
 
-            {/* Portfolio Section */}
-            <section id="portfolio" className="py-16 bg-white">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl font-semibold text-gray-900">My Portfolio</h2>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 px-6 lg:px-12">
-                    <div className="relative">
-                        <img
-                            src="https://via.placeholder.com/400x300"
-                            alt="Project 1"
-                            className="w-full h-64 object-cover rounded-lg shadow-lg"
-                        />
-                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 hover:bg-opacity-70 transition">
-                            <p className="text-white text-lg">Project Title</p>
-                        </div>
-                    </div>
-                    <div className="relative">
-                        <img
-                            src="https://via.placeholder.com/400x300"
-                            alt="Project 2"
-                            className="w-full h-64 object-cover rounded-lg shadow-lg"
-                        />
-                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 hover:bg-opacity-70 transition">
-                            <p className="text-white text-lg">Project Title</p>
-                        </div>
-                    </div>
-                    <div className="relative">
-                        <img
-                            src="https://via.placeholder.com/400x300"
-                            alt="Project 3"
-                            className="w-full h-64 object-cover rounded-lg shadow-lg"
-                        />
-                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 hover:bg-opacity-70 transition">
-                            <p className="text-white text-lg">Project Title</p>
-                        </div>
+    {/* Grid layout for the portfolio items */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-6 lg:px-12">
+        {/* Portfolio Item 1 */}
+        <div className="relative group">
+            <img
+                src="./public/website/alqasimenterprises-co.png"
+                alt="Project 1"
+                className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform transform group-hover:scale-105"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="text-center text-white">
+                    <p className="text-lg font-semibold">Al-Qasim Travel Agency</p>
+                    <div className="mt-2">
+                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition">Visit Now</button>
                     </div>
                 </div>
-            </section>
+            </div>
+        </div>
+
+        {/* Portfolio Item 2 */}
+        <div className="relative group">
+            <img
+                src="./public/website/alineperfectclean-designexus-io.png"
+                alt="Project 2"
+                className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform transform group-hover:scale-105"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="text-center text-white">
+                    <p className="text-lg font-semibold"><a href='https://alineperfectclean.designexus.io/'>Aline Perfect Clean(Currently Not Available due to domain issue )</a></p>
+                    <div className="mt-2">
+                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition">Visit Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Portfolio Item 3 */}
+        <div className="relative group">
+            <img
+                src="./public/website/xford-pk.png"
+                alt="Project 3"
+                className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform transform group-hover:scale-105"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="text-center text-white">
+                    <p className="text-lg font-semibold"><a href='https://xford.com.pk/store/'></a>Xford</p>
+                    <div className="mt-2">
+                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition">Visit Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Portfolio Item 4 */}
+        <div className="relative group">
+            <img
+                src="./public/website/beta-burhanistudios.png"  // Replace with actual project image
+                alt="Project 4"
+                className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform transform group-hover:scale-105"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="text-center text-white">
+                    <p className="text-lg font-semibold"><a href="https://beta.burhanistudios.com/">Burhan Studio</a></p>
+                    <div className="mt-2">
+                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition">Visit Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Portfolio Item 5 */}
+        <div className="relative group">
+            <img
+                src="./public/website/gsuk-org.png"  // Replace with actual project image
+                alt="Project 5"
+                className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform transform group-hover:scale-105"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="text-center text-white">
+                    <p className="text-lg font-semibold"><a href='https://gsuk.org/'>GSUK ORG</a></p>
+                    <div className="mt-2">
+                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition">Visit Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Portfolio Item 6 */}
+        <div className="relative group">
+            <img
+                src="./public/website/omegaleadgen.png"  // Replace with actual project image
+                alt="Project 6"
+                className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform transform group-hover:scale-105"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="text-center text-white">
+                    <p className="text-lg font-semibold"><a href='https://omegaleadgen.com/'></a>Omega Leadgen</p>
+                    <div className="mt-2">
+                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition">Visit Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Portfolio Item 7 */}
+        <div className="relative group">
+            <img
+                src="./public/website/amsterdamsematrassencentrale-nl.png"  // Replace with actual project image
+                alt="Project 7"
+                className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform transform group-hover:scale-105"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="text-center text-white">
+                    <p className="text-lg font-semibold"><a href="https://amsterdamsematrassencentrale.nl/">Amesterdam</a></p>
+                    <div className="mt-2">
+                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition">Visit Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Portfolio Item 8 */}
+        <div className="relative group">
+            <img
+                src="./public/website/hajiyaqoobandsons.png"  // Replace with actual project image
+                alt="Project 8"
+                className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform transform group-hover:scale-105"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="text-center text-white">
+                    <p className="text-lg font-semibold">Haji Yaqoob & Sons</p>
+                    <div className="mt-2">
+                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition">Visit Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
 {/* Contact Section */}
 <section id="contact" className="py-16 bg-blue-50">
     <div className="text-center mb-12">
