@@ -6,7 +6,7 @@ const Portfolio = () => {
         <div className="font-sans">
             {/* Header */}
             <header className="flex justify-between items-center p-4 md:px-12 bg-white shadow-md">
-                <h1 className="text-2xl font-bold text-gray-900"><img src="/public/logo.png" alt="" /></h1>
+            <h1 className="text-2xl font-bold text-gray-900"><img src="./public/Logo's/white-bg-logo.png" alt=""   className="w-40 h-20 object-cover rounded-full shadow-lg"/></h1>
                 <nav className="hidden md:flex space-x-8 text-gray-700">
                     <a href="#home" className="hover:text-blue-600 transition-colors">Home</a>
                     <a href="#services" className="hover:text-blue-600 transition-colors">Services</a>
@@ -139,7 +139,7 @@ const Portfolio = () => {
                 <div className="text-center text-white">
                     <p className="text-lg font-semibold">Al-Qasim Travel Agency</p>
                     <div className="mt-2">
-                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition">Visit Now</button>
+                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition"><a href='https://alqasimenterprises.co/'>Visit Now</a></button>
                     </div>
                 </div>
             </div>
@@ -154,9 +154,9 @@ const Portfolio = () => {
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="text-center text-white">
-                    <p className="text-lg font-semibold"><a href='https://alineperfectclean.designexus.io/'>Aline Perfect Clean(Currently Not Available due to domain issue )</a></p>
+                    <p className="text-lg font-semibold">Aline Perfect Clean(Currently Not Available due to domain issue )</p>
                     <div className="mt-2">
-                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition">Visit Now</button>
+                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition"><a href='https://alineperfectclean.designexus.io/'>Visit Now</a></button>
                     </div>
                 </div>
             </div>
@@ -171,9 +171,9 @@ const Portfolio = () => {
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="text-center text-white">
-                    <p className="text-lg font-semibold"><a href='https://xford.com.pk/store/'></a>Xford</p>
+                    <p className="text-lg font-semibold">Xford</p>
                     <div className="mt-2">
-                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition">Visit Now</button>
+                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition"><a href='https://xford.com.pk/store/'>Visit Now</a></button>
                     </div>
                 </div>
             </div>
@@ -188,9 +188,9 @@ const Portfolio = () => {
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="text-center text-white">
-                    <p className="text-lg font-semibold"><a href="https://beta.burhanistudios.com/">Burhan Studio</a></p>
+                    <p className="text-lg font-semibold">Burhan Studio</p>
                     <div className="mt-2">
-                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition">Visit Now</button>
+                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition"><a href="https://beta.burhanistudios.com/">Visit Now</a></button>
                     </div>
                 </div>
             </div>
@@ -205,9 +205,9 @@ const Portfolio = () => {
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="text-center text-white">
-                    <p className="text-lg font-semibold"><a href='https://gsuk.org/'>GSUK ORG</a></p>
+                    <p className="text-lg font-semibold">GSUK ORG</p>
                     <div className="mt-2">
-                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition">Visit Now</button>
+                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition"><a href='https://gsuk.org/'>Visit Now</a></button>
                     </div>
                 </div>
             </div>
@@ -222,9 +222,9 @@ const Portfolio = () => {
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="text-center text-white">
-                    <p className="text-lg font-semibold"><a href='https://omegaleadgen.com/'></a>Omega Leadgen</p>
+                    <p className="text-lg font-semibold">Omega Leadgen</p>
                     <div className="mt-2">
-                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition">Visit Now</button>
+                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition"><a href='https://omegaleadgen.com/'>Visit Now</a></button>
                     </div>
                 </div>
             </div>
@@ -239,9 +239,9 @@ const Portfolio = () => {
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="text-center text-white">
-                    <p className="text-lg font-semibold"><a href="https://amsterdamsematrassencentrale.nl/">Amesterdam</a></p>
+                    <p className="text-lg font-semibold">Amesterdam</p>
                     <div className="mt-2">
-                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition">Visit Now</button>
+                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition"><a href="https://amsterdamsematrassencentrale.nl/">Visit Now </a></button>
                     </div>
                 </div>
             </div>
@@ -258,7 +258,7 @@ const Portfolio = () => {
                 <div className="text-center text-white">
                     <p className="text-lg font-semibold">Haji Yaqoob & Sons</p>
                     <div className="mt-2">
-                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition">Visit Now</button>
+                        <button className="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-gray-200 transition"><a href="https://hajiyaqoobandsons.com/">Visit Now</a></button>
                     </div>
                 </div>
             </div>
