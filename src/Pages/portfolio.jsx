@@ -15,11 +15,14 @@ const Portfolio = () => {
      {/* Header */}
      <header className="flex justify-between items-center p-4 md:px-12 bg-white shadow-md">
                 <h1 className="text-2xl font-bold text-gray-900">
+                    <a href="https://eccomerce-front-blush.vercel.app/portfolio">
                     <img
                         src="/Logo's/white-bg-logo.png"
                         alt="Logo"
                         className="w-40 h-20 object-cover rounded-full shadow-lg"
                     />
+                    </a>
+                 
                 </h1>
 
                 {/* Hamburger Icon */}
@@ -39,7 +42,7 @@ const Portfolio = () => {
                 </nav>
                 
                 {/* Mobile contact button */}
-                <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors hidden md:block">Contact Me</button>
+                <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors hidden md:block"><a href="https://www.linkedin.com/in/rashid-web-developer">Contact Me</a></button>
             </header>
 
             {/* Home Section */}
@@ -49,7 +52,7 @@ const Portfolio = () => {
                     <p className="text-lg text-gray-700 max-w-md mx-auto md:mx-0">
                         I'm Rashid Khalique, a Web Designer and Developer skilled in WordPress, MERN, HTML/CSS, Bootstrap, and Tailwind CSS, creating visually engaging, optimized websites tailored to client needs, with expertise in UI/UX and responsive design.
                     </p>
-                    <button className="mt-6 bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors">Hire Me</button>
+                    <button className="mt-6 bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors"> <a href="https://www.linkedin.com/in/rashid-web-developer/">Hire Me</a></button>
                 </div>
                 <div className="md:w-1/3 flex justify-center md:justify-end mt-8 md:mt-0">
                     <img
