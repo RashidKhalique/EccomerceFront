@@ -31,8 +31,8 @@ function UserManagements() {
 
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`https://ecommerce-backend-pi-three.vercel.app/api/product/userDelete/${id}`);
-      setUsers((prevUsers) => prevUsers.filter(user => user._id !== id));
+      // await axios.delete(`https://ecommerce-backend-pi-three.vercel.app/api/product/userDelete/${id}`);
+      // setUsers((prevUsers) => prevUsers.filter(user => user._id !== id));
       toast.success(`User with ID ${id} deleted successfully.`);
     } catch (error) {
       console.error('Error deleting user:', error);
@@ -94,7 +94,8 @@ function UserManagements() {
                       <FontAwesomeIcon 
                         icon={faEdit} 
                         className="text-blue-500 cursor-pointer" 
-                        onClick={() => navigate(`/updateUser/${user._id}`)} 
+                        onClick={() => toast.success("You Don't Have Acess to update User")} 
+                        // onClick={() => navigate(`/updateUser/${user._id}`)} 
                       />
                       <FontAwesomeIcon
                         icon={faTrashAlt}

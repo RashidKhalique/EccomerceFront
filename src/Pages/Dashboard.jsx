@@ -192,7 +192,7 @@ console.log(`Rev : ${revenue} , Sale : ${sale}`);
             <div className="space-y-6">
               {/* Transactions Section */}
               <div className="bg-blue-100 p-6 rounded-lg shadow-lg">
-                <h2 className="text-lg font-semibold text-gray-700 mb-4">Recent Transactions</h2>
+                <h2 className="text-lg font-semibold text-gray-700 mb-4">Recent Users</h2>
                 <table className="text-left w-full whitespace-nowrap text-sm">
                   <thead className="text-gray-700">
                     <tr className="font-semibold text-gray-600">
@@ -205,6 +205,7 @@ console.log(`Rev : ${revenue} , Sale : ${sale}`);
                   </thead>
                   <tbody>
                     {users.map((user, index) => (
+                      index<=4? 
                       <tr key={index}>
                         <td className="p-4 font-semibold text-gray-600">{index + 1}</td>
                         <td className="p-4">{user.name}</td>
@@ -220,6 +221,7 @@ console.log(`Rev : ${revenue} , Sale : ${sale}`);
                           </span>
                         </td>
                       </tr>
+                      :""
                     ))}
                   </tbody>
                 </table>

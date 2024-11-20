@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className="bg-gray-100 py-8">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-5">
         {/* Products */}
         <div>
           <h3 className="font-semibold text-lg mb-4">Products</h3>
@@ -49,13 +49,15 @@ const Footer = () => {
           <p className="text-sm text-gray-600 mb-4">
             The latest deals and savings, sent to your inbox weekly.
           </p>
-          <form className="flex">
+          <form className="flex flex-col sm:flex-row">
             <input
               type="email"
               placeholder="Your email"
-              className="flex-1 p-2 border border-gray-400 rounded-l"
+              className="flex-1 p-2 border border-gray-400 rounded-l sm:rounded-l-none sm:rounded-tl sm:rounded-bl mb-2 sm:mb-0"
             />
-            <button className="bg-blue-600 text-white p-2 rounded-r">Sign up</button>
+            <button className="bg-blue-600 text-white p-2 rounded-r sm:rounded-r-none sm:rounded-tr sm:rounded-br sm:ml-2">
+              Sign up
+            </button>
           </form>
         </div>
       </div>

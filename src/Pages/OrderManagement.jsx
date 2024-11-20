@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import Nav from '../Nav';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const OrderManagement = () => {
   const [orders, setOrders] = useState([]);
@@ -88,17 +89,18 @@ const OrderManagement = () => {
   };
 
   const deleteOrder = async (id) => {
-    try {
-      const response = await axios.delete(`https://ecommerce-backend-pi-three.vercel.app/api/order/orders/delete/${id}`);
-      if (response.data.success) {
-        setOrders(orders.filter(order => order.orderId !== id));
-      } else {
-        setErrorMessage(response.data.message || "Failed to delete order");
-      }
-    } catch (error) {
-      setErrorMessage("An error occurred while deleting the order");
-      console.error('Error deleting order:', error);
-    }
+    // try {
+    //   const response = await axios.delete(`https://ecommerce-backend-pi-three.vercel.app/api/order/orders/delete/${id}`);
+    //   if (response.data.success) {
+    //     setOrders(orders.filter(order => order.orderId !== id));
+    //   } else {
+    //     setErrorMessage(response.data.message || "Failed to delete order");
+    //   }
+    // } catch (error) {
+    //   setErrorMessage("An error occurred while deleting the order");
+    //   console.error('Error deleting order:', error);
+    // }
+         toast.success("Delete Order Successfully");
   };
 
   return (
