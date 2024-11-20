@@ -11,7 +11,7 @@ function UserHeader() {
     localStorage.removeItem("token");
     localStorage.removeItem("userdata");
     toast.success("Logout Successfully"); 
-    window.location.href = 'http://localhost:5173/'; 
+    window.location.href = 'https://ecommerce-backend-pi-three.vercel.app'; 
   };
   
 

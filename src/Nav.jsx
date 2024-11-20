@@ -17,7 +17,7 @@ const Nav = () => {
         <div className="p-5">
   <a className="text-nowrap" onClick={() => { navigate('/dashboard'); }}>
     <img 
-      src="../public/logo.png" 
+      src="/logo.png" 
       alt="Logo-Dark" 
       width="150" // or any value you prefer
       height="150" // ensure height and width are equal for a perfect circle
