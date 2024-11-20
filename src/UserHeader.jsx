@@ -1,95 +1,149 @@
-import React, { useState, useEffect } from 'react'
-import { Navigate, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 function UserHeader() {
-  const [length, setlength] = useState(0)
+  const [length, setLength] = useState(0);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to control mobile menu visibility
   const userData = localStorage.getItem("userdata");
   const user = userData ? JSON.parse(userData) : null;
   const navigate = useNavigate();
-  const logout = (e) => {
+
+  const logout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("userdata");
-    toast.success("Logout Successfully"); 
-    window.location.href = 'https://ecommerce-backend-pi-three.vercel.app'; 
+    toast.success("Logout Successfully");
+    window.location.href = 'https://eccomerce-front-blush.vercel.app/';
   };
-  
 
   useEffect(() => {
     var cart = [];
     if (localStorage.getItem('cart')) {
-      cart = JSON.parse(localStorage.getItem('cart'))
-      setlength(cart.length)
+      cart = JSON.parse(localStorage.getItem('cart'));
+      setLength(cart.length);
     } else {
-      localStorage.setItem('cart', [])
+      localStorage.setItem('cart', []);
     }
-
-
   }, []);
-
 
   return (
     <div>
       <div className="bg-white">
-
         <header className="relative bg-white">
-          <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">Get free delivery on orders over $1000</p>
+          <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+            Get free delivery on orders over $1000
+          </p>
 
           <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="border-b border-gray-200">
-              <div className="flex h-16 items-center">
-                <button type="button" className="relative rounded-md bg-white p-2 text-gray-400 lg:hidden">
+              <div className="flex h-16 items-center justify-between">
+                {/* Mobile Menu Button */}
+                <button
+                  type="button"
+                  className="relative rounded-md bg-white p-2 text-gray-400 lg:hidden"
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                >
                   <span className="absolute -inset-0.5"></span>
                   <span className="sr-only">Open menu</span>
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                  <svg
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                    data-slot="icon"
+                  >
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                   </svg>
                 </button>
 
-
+                {/* Logo */}
                 <div className="ml-4 flex lg:ml-0">
                   <a href="#">
                     <span className="sr-only">Your Company</span>
-                    <img className="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+                    <img
+                      className="h-8 w-auto"
+                      src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
+                      alt=""
+                    />
                   </a>
                 </div>
 
-
-                <div className="hidden lg:ml-8 lg:block lg:self-stretch">
+                {/* Desktop Menu */}
+                <div className="hidden lg:block lg:ml-8">
                   <div className="flex h-full space-x-8">
-
-                   <a className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800 cursor-pointer" onClick={() => navigate('/')}>Home</a>
-                    <a className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800 cursor-pointer" onClick={() => navigate('/ShopCart')}>Cart</a>
-                    <a className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800 cursor-pointer" onClick={() => navigate('/ProductStore')}>Stores</a>
-                    <a className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800 cursor-pointer" onClick={() => navigate('/UserOrderTracking')}>Track Order</a>
-
+                    <a
+                      className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800 cursor-pointer"
+                      onClick={() => navigate('/')}
+                    >
+                      Home
+                    </a>
+                    <a
+                      className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800 cursor-pointer"
+                      onClick={() => navigate('/ShopCart')}
+                    >
+                      Cart
+                    </a>
+                    <a
+                      className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800 cursor-pointer"
+                      onClick={() => navigate('/ProductStore')}
+                    >
+                      Stores
+                    </a>
+                    <a
+                      className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800 cursor-pointer"
+                      onClick={() => navigate('/UserOrderTracking')}
+                    >
+                      Track Order
+                    </a>
                   </div>
-                </div> 
+                </div>
 
+                {/* User Info and Cart */}
                 <div className="ml-auto flex items-center">
-                  <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  {user ? (
-                    <>
-                       <span className="text-sm font-medium text-gray-700 cursor-pointer">Welcome, {user.name}</span>
-                       <span className="text-sm font-medium text-gray-700 cursor-pointer" onClick={logout}>Logout</span>
-
-                    </>
-             
-            ) : (
-                <>
-      
-
-                    <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800" onClick={()=>navigate('/login')}>Sign in</a>
-                    <span className="h-6 w-px bg-gray-200" aria-hidden="true"></span>
-                    <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800" onClick={()=>navigate('/signup')}>Create account</a>
-                </>
-            )}
+                  <div className="hidden lg:flex lg:items-center lg:space-x-6">
+                    {user ? (
+                      <>
+                        <span className="text-sm font-medium text-gray-700 cursor-pointer">
+                          Welcome, {user.name}
+                        </span>
+                        <span
+                          className="text-sm font-medium text-gray-700 cursor-pointer"
+                          onClick={logout}
+                        >
+                          Logout
+                        </span>
+                      </>
+                    ) : (
+                      <>
+                        <a
+                          href="#"
+                          className="text-sm font-medium text-gray-700 hover:text-gray-800"
+                          onClick={() => navigate('/login')}
+                        >
+                          Sign in
+                        </a>
+                        <span className="h-6 w-px bg-gray-200" aria-hidden="true"></span>
+                        <a
+                          href="#"
+                          className="text-sm font-medium text-gray-700 hover:text-gray-800"
+                          onClick={() => navigate('/signup')}
+                        >
+                          Create account
+                        </a>
+                      </>
+                    )}
                   </div>
+
+                  {/* Cart Icon */}
+              
 
                   <div className="hidden lg:ml-8 lg:flex">
                     <a href="#" className="flex items-center text-gray-700 hover:text-gray-800">
-                      <img src="https://tailwindui.com/plus/img/flags/flag-canada.svg" alt="" className="block h-auto w-5 flex-shrink-0" />
-                      <span className="ml-3 block text-sm font-medium">CAD</span>
+                      <img src="https://cdn-icons-png.flaticon.com/512/14009/14009752.png " alt="" className="block h-auto w-5 flex-shrink-0" />
+                      <span className="ml-3 block text-sm font-medium">PAK</span>
                       <span className="sr-only">, change currency</span>
                     </a>
                   </div>
@@ -102,7 +156,6 @@ function UserHeader() {
                       </svg>
                     </a>
                   </div>
-
                   <div className="ml-4 flow-root lg:ml-6">
                     <a className="group -m-2 flex items-center p-2" >
                       <svg className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" onClick={() => navigate('/ShopCart')}>
@@ -112,14 +165,73 @@ function UserHeader() {
                       <span className="sr-only">items in cart, view bag</span>
                     </a>
                   </div>
+
+
+
+
+
+
+
+
+
                 </div>
               </div>
             </div>
+
+            {/* Mobile Menu (Toggle visibility when `isMenuOpen` is true) */}
+            {isMenuOpen && (
+              <div className="lg:hidden">
+                <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
+                  <a href="#" className="text-gray-700 block px-3 py-2 rounded-md text-base font-medium">
+                    Home
+                  </a>
+                  <a href="#" className="text-gray-700 block px-3 py-2 rounded-md text-base font-medium">
+                    Cart
+                  </a>
+                  <a href="#" className="text-gray-700 block px-3 py-2 rounded-md text-base font-medium">
+                    Stores
+                  </a>
+                  <a href="#" className="text-gray-700 block px-3 py-2 rounded-md text-base font-medium">
+                    Track Order
+                  </a>
+                  {/* Add mobile sign-in/sign-up options */}
+                  {!user && (
+                    <>
+                      <a
+                        href="#"
+                        className="text-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+                        onClick={() => navigate('/login')}
+                      >
+                        Sign in
+                      </a>
+                      <a
+                        href="#"
+                        className="text-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+                        onClick={() => navigate('/signup')}
+                      >
+                        Create account
+                      </a>
+                    </>
+                  )}
+                  {user && (
+                    <>
+                      <a
+                        href="#"
+                        className="text-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+                        onClick={logout}
+                      >
+                        Logout
+                      </a>
+                    </>
+                  )}
+                </div>
+              </div>
+            )}
           </nav>
         </header>
       </div>
     </div>
-  )
+  );
 }
 
-export default UserHeader
+export default UserHeader;

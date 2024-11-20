@@ -15,8 +15,7 @@ const PaymentSuccess = () => {
         const response = await axios.get('https://ecommerce-backend-pi-three.vercel.app/api/order/orders/show');
 
         if (response.data.success) {
-          const filteredOrders = response.data.OrderShow.filter(order => order._id === updatedId);
-          
+          const filteredOrders = response.data.OrderShow.filter(order => order.orderId === updatedId);
           setOrders(filteredOrders);
         } else {
           setErrorMessage("No orders found.");

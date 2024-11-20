@@ -299,77 +299,80 @@ const ShoppingCart = () => {
   };
 
   return (
-    <div>
-      <UserHeader />
-      <div className="max-w-7xl mx-auto pl-20 pr-16 pt-4 pb-4 mb-4">
-        <h2 className="text-2xl font-bold mb-4">Shopping Cart</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="lg:col-span-2 space-y-6">
-            {cartItems.length > 0 ? (
-              cartItems.map((item) => (
-                <div key={item._id} className="flex items-center justify-between border p-4">
-                  <img src={item.imageurl} alt={item.name} className="w-20 h-20 object-cover" />
-                  <div className="flex-1 mx-4">
-                    <h3 className="text-lg font-semibold">{item.name}</h3>
-                    <p className="text-gray-800">${item.price * (item.quantity || 1) - item.discount }</p>
-                    <label htmlFor=""> Quantity : </label>
-                    <input
-                      type="number"
-                      min="1"
-                      value={item.quantity || 1}
-                      onChange={(e) => handleQuantityChange(item._id, e.target.value)}
-                      className="mt-2 w-16 p-1 border rounded items-center"
-                    />
-                  </div>
-                  <button className="ml-4 text-red-600" onClick={() => handleRemoveItem(item._id)}>Remove</button>
-                </div>
-              ))
-            ) : (
-              <p>Your cart is empty.</p>
-            )}
-          </div>
-          <div className="border p-6">
-            <h3 className="text-lg font-semibold mb-4">Order Summary</h3>
-            <div className="space-y-2">
-              <div className="flex justify-between text-gray-700">
-                <span>Subtotal</span>
-                <span>${totalPrice}</span>
+<div>
+  <UserHeader />
+  <div className="max-w-7xl mx-auto pl-4 pr-4 pt-4 pb-4 mb-4 lg:pl-20 lg:pr-16">
+    <h2 className="text-2xl font-bold mb-4">Shopping Cart</h2>
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="lg:col-span-2 space-y-6">
+        {cartItems.length > 0 ? (
+          cartItems.map((item) => (
+            <div key={item._id} className="flex items-center justify-between border p-4">
+              <img src={item.imageurl} alt={item.name} className="w-20 h-20 object-cover" />
+              <div className="flex-1 mx-4">
+                <h3 className="text-lg font-semibold">{item.name}</h3>
+                <p className="text-gray-800">${(item.price * (item.quantity || 1) - item.discount).toFixed(2)}</p>
+                <label> Quantity: </label>
+                <input
+                  type="number"
+                  min="1"
+                  value={item.quantity || 1}
+                  onChange={(e) => handleQuantityChange(item._id, e.target.value)}
+                  className="mt-2 w-16 p-1 border rounded"
+                />
               </div>
-              <div className="flex justify-between text-gray-700">
-                <span>Shipping estimate</span>
-                <span>${totalPrice > 1000 ? '0.00' : discount.toFixed(2)}</span>
-              </div>
-              <div className="flex justify-between text-gray-700">
-                <span>Tax estimate</span>
-                <span>${(totalPrice * 0.04).toFixed(2)}</span>
-              </div>
-              <div className="flex justify-between text-gray-900 font-bold">
-                <span>Order total</span>
-                <span>${(totalPrice + (totalPrice > 1000 ? 0 : discount) + totalPrice * 0.04).toFixed(2)}</span>
-              </div>
+              <button className="ml-4 text-red-600" onClick={() => handleRemoveItem(item._id)}>Remove</button>
             </div>
-
-            <button onClick={handleCheckout} className="mt-4 w-full bg-blue-600 text-white py-2 rounded-md">Checkout</button>
-          </div>
-        </div>
+          ))
+        ) : (
+          <p>Your cart is empty.</p>
+        )}
       </div>
 
-      {/* Checkout Modal */}
-      {isCheckoutOpen && (
-        <Elements stripe={stripePromise} options={{ clientSecret }}>
-          <CheckoutModal
-            isOpen={isCheckoutOpen}
-            onClose={() => setIsCheckoutOpen(false)}
-            cartItems={cartItems}
-            totalPrice={totalPrice}
-            discount={discount}
-            clientSecret={clientSecret}
-          />
-        </Elements>
-      )}
+      <div className="border p-6">
+        <h3 className="text-lg font-semibold mb-4">Order Summary</h3>
+        <div className="space-y-2">
+          <div className="flex justify-between text-gray-700">
+            <span>Subtotal</span>
+            <span>${totalPrice.toFixed(2)}</span>
+          </div>
+          <div className="flex justify-between text-gray-700">
+            <span>Shipping estimate</span>
+            <span>${totalPrice > 1000 ? '0.00' : discount.toFixed(2)}</span>
+          </div>
+          <div className="flex justify-between text-gray-700">
+            <span>Tax estimate</span>
+            <span>${(totalPrice * 0.04).toFixed(2)}</span>
+          </div>
+          <div className="flex justify-between text-gray-900 font-bold">
+            <span>Order total</span>
+            <span>${(totalPrice + (totalPrice > 1000 ? 0 : discount) + totalPrice * 0.04).toFixed(2)}</span>
+          </div>
+        </div>
 
-      <Footer />
+        <button onClick={handleCheckout} className="mt-4 w-full bg-blue-600 text-white py-2 rounded-md">
+          Checkout
+        </button>
+      </div>
     </div>
+  </div>
+
+  {/* Checkout Modal */}
+  {isCheckoutOpen && (
+    <Elements stripe={stripePromise} options={{ clientSecret }}>
+      <CheckoutModal
+        isOpen={isCheckoutOpen}
+        onClose={() => setIsCheckoutOpen(false)}
+        cartItems={cartItems}
+        totalPrice={totalPrice}
+        discount={discount}
+        clientSecret={clientSecret}
+      />
+    </Elements>
+  )}
+
+  <Footer />
+</div>
   );
 };
 

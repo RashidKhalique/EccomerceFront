@@ -41,56 +41,58 @@ const ProductDetail = () => {
 
     return (
         <div>
-            <ToastContainer /> {/* Make sure this is included */}
-            <UserHeader />
-            <div className="max-w-7xl mx-auto p-4">
-                <div className="flex flex-col lg:flex-row items-start gap-6">
-                    {Products.map((product, index) => (
-                        product._id === id ? (
-                            <div key={index} className="w-full flex gap-6">
-                                <div className="w-full">
-                                    <img
-                                        src={product.imageurl} 
-                                        alt={product.name} 
-                                        className="w-full object-cover"
-                                    />
-                                    <div className="grid grid-cols-4 gap-2 mt-4">
-                                        <img src={product.imageurl} alt={product.name} className="border" />
-                                        <img src={product.imageurl} alt={product.name} className="border" />
-                                        <img src={product.imageurl} alt={product.name} className="border" />
-                                        <img src={product.imageurl} alt={product.name} className="border" />
-                                    </div>
-                                </div>
-
-                                {/* Product details */}
-                                <div className="w-full flex p-8 flex-col">
-                                    <h2 className="text-2xl font-bold">{product.name}</h2>
-                                    <p className="text-xl text-gray-600">${product.price}</p>
-                                    <div className="flex items-center my-4">
-                                        {/* Stars rating */}
-                                        <div className="flex items-center text-yellow-400">
-                                            ★★★★☆
-                                        </div>
-                                        <span className="ml-2 text-sm text-gray-600">Rating</span>
-                                    </div>
-
-                                    <p className="text-gray-700">
-                                        The Zip Tote Basket is the perfect midpoint between shopping tote and stylish urban basket. Features plenty of pockets, durable canvas, and a zipper closure for added security.
-                                    </p>
-
-                                    <div className="mt-6">
-                                        <button 
-                                            className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700" 
-                                            onClick={(e) => { e.stopPropagation(); Addtocart(product); }}
-                                        >
-                                            Add to bag
-                                        </button>
-                                    </div>
+        <ToastContainer /> {/* Make sure this is included */}
+        <UserHeader />
+        <div className="max-w-7xl mx-auto p-4">
+            <div className="flex flex-col lg:flex-row items-start gap-6">
+                {Products.map((product, index) => (
+                    product._id === id ? (
+                        <div key={index} className="w-full flex flex-col lg:flex-row gap-6">
+                            <div className="w-full lg:w-1/2">
+                                <img
+                                    src={product.imageurl} 
+                                    alt={product.name} 
+                                    className="w-full object-cover"
+                                />
+                                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mt-4">
+                                    <img src={product.imageurl} alt={product.name} className="border" />
+                                    <img src={product.imageurl} alt={product.name} className="border" />
+                                    <img src={product.imageurl} alt={product.name} className="border" />
+                                    <img src={product.imageurl} alt={product.name} className="border" />
                                 </div>
                             </div>
-                        ) : null
-                    ))}
-                </div>
+    
+                            {/* Product details */}
+                            <div className="w-full lg:w-1/2 flex p-8 flex-col">
+                                <h2 className="text-2xl font-bold">{product.name}</h2>
+                                <p className="text-xl text-gray-600">${product.price}</p>
+                                <div className="flex items-center my-4">
+                                    {/* Stars rating */}
+                                    <div className="flex items-center text-yellow-400">
+                                        ★★★★☆
+                                    </div>
+                                    <span className="ml-2 text-sm text-gray-600">Rating</span>
+                                </div>
+    
+                                <p className="text-gray-700">
+                                    The Zip Tote Basket is the perfect midpoint between shopping tote and stylish urban basket. Features plenty of pockets, durable canvas, and a zipper closure for added security.
+                                </p>
+    
+                                <div className="mt-6">
+                                    <button 
+                                        className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700" 
+                                        onClick={(e) => { e.stopPropagation(); Addtocart(product); }}
+                                    >
+                                        Add to bag
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    ) : null
+                ))}
+            </div>
+    
+    
 
                 {/* Related products */}
                 <div className="mt-12">
@@ -112,6 +114,7 @@ const ProductDetail = () => {
                     </div>
                 </div>
             </div>
+         
             <Footer />
         </div>
     );

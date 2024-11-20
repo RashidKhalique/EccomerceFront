@@ -11,7 +11,7 @@ function NotFoundPage() {
           href="/"
           className="inline-block px-6 py-3 text-lg font-medium text-purple-900 bg-white rounded-full hover:bg-purple-100 transition duration-300"
         >
-          Go Back to Home
+          Go Back to Home 
         </a>
       </div>
     </div>

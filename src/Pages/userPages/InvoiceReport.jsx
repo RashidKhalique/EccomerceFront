@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import { useNavigate } from 'react-router-dom';
+import UserHeader from '../../UserHeader';
+import Footer from '../../footer';
 
 const InvoiceReport = () => {
   const [order, setOrder] = useState(null);
   const [errorMessage, setErrorMessage] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchOrder = async () => {
@@ -62,6 +66,8 @@ const InvoiceReport = () => {
   const total = subtotal + tax + DeliveryPricing;
 
   return (
+    <>
+        <UserHeader/>
     <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg" id="invoice">
       <header className="flex justify-between items-center mb-8">
         <div>
@@ -124,15 +130,25 @@ const InvoiceReport = () => {
         <p className="text-gray-600">Please make payment via: {PaymentMethod}</p>
       </footer>
 
-      <div className="mt-6 text-center">
+      <div className="mt-6  text-center p-3">
         <button
           onClick={handleDownload}
           className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700"
         >
           Download Invoice
         </button>
+     <span> &nbsp; </span>
+        <button
+          onClick={()=>{navigate('/')}}
+          className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700"
+        >
+          Back Home
+        </button>
       </div>
     </div>
+    <Footer/>
+    </>
+
   );
 };
 

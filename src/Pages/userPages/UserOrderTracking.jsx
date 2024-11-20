@@ -10,6 +10,7 @@ const UserOrderTracking = () => {
   const [totalAmounts, setTotalAmounts] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
+
   useEffect(() => {
     const fetchOrders = async () => {
       try {
@@ -49,19 +50,23 @@ const UserOrderTracking = () => {
 
   const filteredOrders = userdata
     ? orders.filter(order =>
-      order.email === userdata.email &&
-      (order.orderId.includes(searchQuery) || order.DeliveryStatus.includes(searchQuery))
-    )
+        order.email === userdata.email &&
+        (order.orderId.includes(searchQuery) || order.DeliveryStatus.includes(searchQuery))
+      )
     : [];
 
   return (
     <>
       <UserHeader />
-      <div className=" bg-gray-50 pl-20 pr-16 pt-4 pb-4 mb-4">
+      <div className="bg-gray-50 pl-4 pr-4 sm:pl-20 sm:pr-16 pt-4 pb-4 mb-4">
         {/* User Info Section */}
         <div className="flex items-center gap-4 bg-pink-300 rounded shadow p-4 mb-6">
           <div className="w-16 h-16 rounded-full bg-gray-300">
-            <img src="https://media.licdn.com/dms/image/v2/D4D03AQGhYPSmz_u4ZA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730441088583?e=1735776000&v=beta&t=XmA39x9gU44NSNEESpiDUIKyXAu9MZQNn3SFf4280VQ" alt="User profile" className="rounded-full w-full h-full object-cover" />
+            <img
+              src="https://media.licdn.com/dms/image/v2/D4D03AQGhYPSmz_u4ZA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730441088583?e=1735776000&v=beta&t=XmA39x9gU44NSNEESpiDUIKyXAu9MZQNn3SFf4280VQ"
+              alt="User profile"
+              className="rounded-full w-full h-full object-cover"
+            />
           </div>
           <div>
             <div className="text-lg font-bold">{userdata?.name}</div>
@@ -94,11 +99,9 @@ const UserOrderTracking = () => {
                   <th className="py-2 px-4">Created At</th>
                   <th className="py-2 px-4">Delivered Date</th>
                   <th className="py-2 px-4">Invoice</th>
-
                 </tr>
               </thead>
               <tbody>
-
                 {filteredOrders && filteredOrders.length > 0 ? (
                   filteredOrders.map((order, index) => (
                     <tr key={order._id} className="border-b text-center">
@@ -110,21 +113,20 @@ const UserOrderTracking = () => {
                       <td className="py-2 px-4">{order.PaymentMethod}</td>
                       <td className="py-2 px-4">{new Date(order.createdAt).toLocaleString()}</td>
                       <td className="py-2 px-4">{order.DeliveredDate}</td>
-                      {
-                        order.DeliveryStatus === "Delivered" ? (
-                          <td className="py-2 px-4 bg-green-300">
-                            <button onClick={() => navigate(`/Invoice/${order.orderId}`)}>Download Invoice</button>
-                          </td>
-                        ) : (
-                          <td className="py-2 px-4 bg-yellow-300">{order.DeliveryStatus}</td>
-                        )
-                      }
+                      {order.DeliveryStatus === "Delivered" ? (
+                        <td className="py-2 px-4 bg-green-300">
+                          <button onClick={() => navigate(`/Invoice/${order.orderId}`)}>Download Invoice</button>
+                        </td>
+                      ) : (
+                        <td className="py-2 px-4 bg-yellow-300">{order.DeliveryStatus}</td>
+                      )}
                     </tr>
                   ))
                 ) : (
-                  <tr><td colSpan="7" className="text-center py-2">You don't have any data</td></tr>
+                  <tr>
+                    <td colSpan="7" className="text-center py-2">You don't have any data</td>
+                  </tr>
                 )}
-
               </tbody>
             </table>
           </div>

@@ -135,7 +135,7 @@ const CouponManager = () => {
   
         {/* Popup Form */}
         {showPopup && (
-          <div className="fixed inset-0 bg-gray-500 bg-opacity-50 flex items-center justify-center">
+          <div className="fixed inset-0 bg-gray-500 bg-opacity-50 flex items-center justify-center ">
             <div className="bg-white p-6 rounded-lg shadow-lg w-96 max-w-sm mx-4 sm:mx-auto">
               <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Add New Coupon</h3>
               <form onSubmit={handleAddCouponSubmit}>

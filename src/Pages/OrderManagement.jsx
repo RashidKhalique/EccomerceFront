@@ -100,7 +100,7 @@ const OrderManagement = () => {
     //   setErrorMessage("An error occurred while deleting the order");
     //   console.error('Error deleting order:', error);
     // }
-         toast.success("Delete Order Successfully");
+         toast.success("Delete Order Successfully")
   };
 
   return (
