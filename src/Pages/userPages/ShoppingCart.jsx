@@ -124,7 +124,7 @@ const CheckoutModal = ({ isOpen, onClose, cartItems, totalPrice, discount, clien
           return_url: `https://eccomerce-front-blush.vercel.app/PaymentSuccess/${id}`,
         },
       });
-      toast.success("Payment Successful");
+      toast.success("Payment Successful ");
     } catch (error) {
       setErrorMessage(error.message || 'Payment failed. Please try again.');
     } finally {
