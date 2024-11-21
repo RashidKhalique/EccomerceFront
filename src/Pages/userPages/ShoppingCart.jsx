@@ -121,7 +121,7 @@ const CheckoutModal = ({ isOpen, onClose, cartItems, totalPrice, discount, clien
       await stripe.confirmPayment({
         elements,
         confirmParams: {
-          return_url: `https://eccomerce-front-blush.vercel.app/portfolio/PaymentSuccess/${id}`,
+          return_url: `https://eccomerce-front-blush.vercel.app/PaymentSuccess/${id}`,
         },
       });
       toast.success("Payment Successful");
