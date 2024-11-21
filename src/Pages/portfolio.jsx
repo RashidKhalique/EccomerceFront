@@ -1,4 +1,7 @@
 import React from 'react';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import { useState } from 'react';
 import { FaMapMarkerAlt, FaEnvelope, FaLinkedin, FaGithub, FaTwitter, FaInstagram, FaFacebook,FaBars,FaTimes } from 'react-icons/fa';
 
@@ -8,8 +11,32 @@ const Portfolio = () => {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-
+    const testimonials = [
+        {
+          name: "Tarique Majeed",
+          position: "CEO of Tarique Majeed(Freelance Design Consulant) ",
+          message:
+            "Commodo amet fugiat exceptetur sunt qui ea elit cupidatat ullamco consectetur ipsum elit consequat. Elit sunt proident ea nulla ad nulla dolore ad pariatur tempor non. Sint veniam minim et ea.",
+          image: "https://media.licdn.com/dms/image/v2/D4D03AQEyAFUAUqkXnQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1685446225897?e=1737590400&v=beta&t=0ATFPV2wuGndV3zmVoW6zrc9IApdF0beqPsGsgwY1FM", // Replace with real image URLs
+        },
+        {
+          name: "Sehar Shahzadi",
+          position: "Shopify Expert ",
+          message:
+            "Rashid is an expert web developer working for my Agency www.platinumwebagency.com who recently completed a Wordpress website. His attention to detail and ability to replicate the functionalities of the original site, thesovereignkingdom.com, were impressive. With excellent communication and technical expertise, Rashid delivered a visually appealing and seamlessly functional website. I highly recommend Rashid for any web development needs.",
+          image: "https://media.licdn.com/dms/image/v2/D4D35AQGyYMNvG37HuQ/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1667114508832?e=1732777200&v=beta&t=gNWJyFgHNH_keBIiMiWqiC21X5lTXl80acX1abUynyo", // Replace with real image URLs
+        },
+    
+      ];  
+      const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      };
     return (
+        
         
         <div className="font-sans">
      {/* Header */}
@@ -310,6 +337,40 @@ const Portfolio = () => {
 </section>
 
 
+{/* Testimonial Section */}
+<div className="max-w-4xl mx-auto p-6">
+<h2 className="text-center text-3xl font-bold mb-6">Client Review's</h2>
+  <Slider {...settings}>
+    {testimonials.map((testimonial, index) => (
+      <div key={index} className="p-6">
+        <figure className="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-200">
+          <img
+            className="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto"
+            src={testimonial.image}
+            alt={testimonial.name}
+            width="384"
+            height="512"
+          />
+          <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
+            <blockquote>
+              <p className="text-lg font-medium">
+                “{testimonial.message}”
+              </p>
+            </blockquote>
+            <figcaption className="font-medium">
+              <div className="text-sky-500 dark:text-sky-400">
+                {testimonial.name}
+              </div>
+              <div className="text-slate-700 dark:text-slate-500">
+                {testimonial.position}
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+    ))}
+  </Slider>
+</div>
 
 
 
