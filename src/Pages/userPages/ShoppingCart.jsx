@@ -126,7 +126,7 @@ const CheckoutModal = ({ isOpen, onClose, cartItems, totalPrice, discount, clien
       });
       toast.success("Payment Successful ");
     } catch (error) {
-      setErrorMessage(error.message || 'Payment failed. Please try again.');
+      setErrorMessage(error.message || 'Payment failed. Please try again');
     } finally {
       setLoading(false);
     }
