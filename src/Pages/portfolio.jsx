@@ -13,20 +13,21 @@ const Portfolio = () => {
     };
     const testimonials = [
         {
+            name: "Sehar Shahzadi",
+            position: "Shopify Expert ",
+            message:
+              "Rashid is an expert web developer working for my Agency www.platinumwebagency.com who recently completed a Wordpress website. His attention to detail and ability to replicate the functionalities of the original site, thesovereignkingdom.com, were impressive. With excellent communication and technical expertise, Rashid delivered a visually appealing and seamlessly functional website. I highly recommend Rashid for any web development needs.",
+            image: "https://media.licdn.com/dms/image/v2/D4D35AQGyYMNvG37HuQ/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1667114508832?e=1732777200&v=beta&t=gNWJyFgHNH_keBIiMiWqiC21X5lTXl80acX1abUynyo", // Replace with real image URLs
+          },
+      
+        {
           name: "Tarique Majeed",
           position: "CEO of Tarique Majeed(Freelance Design Consulant) ",
           message:
             "Commodo amet fugiat exceptetur sunt qui ea elit cupidatat ullamco consectetur ipsum elit consequat. Elit sunt proident ea nulla ad nulla dolore ad pariatur tempor non. Sint veniam minim et ea.",
           image: "https://media.licdn.com/dms/image/v2/D4D03AQEyAFUAUqkXnQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1685446225897?e=1737590400&v=beta&t=0ATFPV2wuGndV3zmVoW6zrc9IApdF0beqPsGsgwY1FM", // Replace with real image URLs
         },
-        {
-          name: "Sehar Shahzadi",
-          position: "Shopify Expert ",
-          message:
-            "Rashid is an expert web developer working for my Agency www.platinumwebagency.com who recently completed a Wordpress website. His attention to detail and ability to replicate the functionalities of the original site, thesovereignkingdom.com, were impressive. With excellent communication and technical expertise, Rashid delivered a visually appealing and seamlessly functional website. I highly recommend Rashid for any web development needs.",
-          image: "https://media.licdn.com/dms/image/v2/D4D35AQGyYMNvG37HuQ/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1667114508832?e=1732777200&v=beta&t=gNWJyFgHNH_keBIiMiWqiC21X5lTXl80acX1abUynyo", // Replace with real image URLs
-        },
-    
+  
       ];  
       const settings = {
         dots: true,
