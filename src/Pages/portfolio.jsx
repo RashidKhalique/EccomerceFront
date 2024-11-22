@@ -24,7 +24,7 @@ const Portfolio = () => {
           name: "Tarique Majeed",
           position: "CEO of Tarique Majeed(Freelance Design Consulant) ",
           message:
-            "Commodo amet fugiat exceptetur sunt qui ea elit cupidatat ullamco consectetur ipsum elit consequat. Elit sunt proident ea nulla ad nulla dolore ad pariatur tempor non. Sint veniam minim et ea.",
+            "Hi, I'm Tariq, Founder of (tariqmajeed.com), as a design and web consultant since 2006. Rashid delivered outstanding website solutions for multiple projects (Al Qasim Travel Agency, Aline Perfect Clean, XFord, Burhan Studio, GSUK, Omega Leadgen, Amsterdam, Haji Yaqoob & Son's). His expertise, timely completion, and client-centric approach ensured satisfaction from both me and our clients. I highly recommend Rashid for website development and design needs.",
           image: "https://media.licdn.com/dms/image/v2/D4D03AQEyAFUAUqkXnQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1685446225897?e=1737590400&v=beta&t=0ATFPV2wuGndV3zmVoW6zrc9IApdF0beqPsGsgwY1FM", // Replace with real image URLs
         },
   
