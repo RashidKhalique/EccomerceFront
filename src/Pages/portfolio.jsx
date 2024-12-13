@@ -17,7 +17,7 @@ const Portfolio = () => {
             position: "Shopify Expert ",
             message:
               "Rashid is an expert web developer working for my Agency www.platinumwebagency.com who recently completed a Wordpress website. His attention to detail and ability to replicate the functionalities of the original site, thesovereignkingdom.com, were impressive. With excellent communication and technical expertise, Rashid delivered a visually appealing and seamlessly functional website. I highly recommend Rashid for any web development needs.",
-            image: "https://media.licdn.com/dms/image/v2/D4D35AQGyYMNvG37HuQ/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1667114508832?e=1733806800&v=beta&t=FpFcPFDYBaK5VSizOs-oZcTQL60jKU8xmMouPQ3wG0E", // Replace with real image URLs
+            image: "https://media.licdn.com/dms/image/v2/D4D35AQGyYMNvG37HuQ/profile-framedphoto-shrink_100_100/profile-framedphoto-shrink_100_100/0/1667114508832?e=1734670800&v=beta&t=lVcb952Vu3qSuhaOFTpkAsvmxkyy7PvPqrbQTrmzrgE", // Replace with real image URLs
           },
       
         {
