@@ -74,7 +74,7 @@ const Portfolio = () => {
             </header>
 
             {/* Home Section */}
-            <section className="flex flex-col md:flex-row items-center justify-between p-12 bg-blue-50">
+            <section className="flex flex-col md:flex-row items-center justify-between p-12 bg-blue-50 ml-2 mx-2">
                 <div className="text-center md:text-left md:w-1/2 pt-5">
                     <h1 className="text-4xl font-bold text-gray-900 my-4">Rashid Khalique</h1>
                     <p className="text-lg text-gray-700 max-w-md mx-auto md:mx-0">
