@@ -85,7 +85,7 @@ const Portfolio = () => {
                 <div className="md:w-1/3 flex justify-center md:justify-end mt-8 md:mt-0">
                     <img
                         src="https://media.licdn.com/dms/image/v2/D4D03AQGhYPSmz_u4ZA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730441088583?e=1743638400&v=beta&t=P7LqOKKHJiMCQ98RlQp_ZfoT3cOH2Vhx_vUxj8q-KPE"
-                        alt="Cody"
+                        alt="rashid"
                         className="w-72 h-auto object-cover rounded-lg shadow-lg"
                     />
                 </div>
@@ -125,8 +125,7 @@ const Portfolio = () => {
                 <h2 className="text-center text-3xl font-bold mb-6">About Me</h2>
                 <div className="flex flex-col md:flex-row items-center md:space-x-12">
                     <img
-                        src="https://media.licdn.com/dms/image/v2/D4D03AQGhYPSmz_u4ZA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730441088583?e=1736985600&v=beta&t=FNV4GiOdfZhHMgU-d-xAwg3p1Ew3Ice3_anfPzWGSmQ"
-                        alt="Rashid Khalique"
+                        src="https://media.licdn.com/dms/image/v2/D4D03AQGhYPSmz_u4ZA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730441088583?e=1743638400&v=beta&t=P7LqOKKHJiMCQ98RlQp_ZfoT3cOH2Vhx_vUxj8q-KPE"
                         className="w-40 h-40 object-cover rounded-full shadow-lg"
                     />
                     <div className="mt-6 md:mt-0">
