@@ -139,21 +139,21 @@ function UserHome() {
                       </div>
                       <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                         <div className="h-64 w-44 overflow-hidden rounded-lg">
-                          <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg" alt="" className="h-full w-full object-cover object-center" />
+                          <img src="https://www.autofulfil.com/wp-content/uploads/2020/03/cosmetics.jpg" alt="" className="h-full w-full object-cover object-center" />
                         </div>
                         <div className="h-64 w-44 overflow-hidden rounded-lg">
-                          <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg" alt="" className="h-full w-full object-cover object-center" />
+                          <img src="https://digitalmarketingskill.com/wp-content/uploads/2019/01/products-to-sell-online-hair-cosmetics-1.jpg" alt="" className="h-full w-full object-cover object-center" />
                         </div>
                         <div className="h-64 w-44 overflow-hidden rounded-lg">
-                          <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg" alt="" className="h-full w-full object-cover object-center" />
+                          <img src="https://www.wearedivisa.com/wp-content/uploads/2021/02/consumer-electronics-ecommerce-digital-marketing.jpg alt="" className="h-full w-full object-cover object-center" />
                         </div>
                       </div>
                       <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                         <div className="h-64 w-44 overflow-hidden rounded-lg">
-                          <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg" alt="" className="h-full w-full object-cover object-center" />
+                          <img src="https://aureatelabs.com/wp-content/uploads/2024/11/Choose-your-business-niche.png" alt="" className="h-full w-full object-cover object-center" />
                         </div>
                         <div className="h-64 w-44 overflow-hidden rounded-lg">
-                          <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg" alt="" className="h-full w-full object-cover object-center" />
+                          <img src="https://s0.as-img.com/r/pic/2014366/1500/1500/with_box.jpg?bg=f5f5f5&u=1716496988" alt="" className="h-full w-full object-cover object-center" />
                         </div>
                       </div>
                     </div>
