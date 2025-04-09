@@ -141,7 +141,7 @@ console.log("order : ",orders)
                     <FontAwesomeIcon
                       icon={faEdit}
                       className="text-blue-500 cursor-pointer"
-                      onClick={() => handleStatusChange(order.orderId)}
+                      onClick={() => handleStatusChange(order._id)}
                     />
                     <FontAwesomeIcon
                       icon={faTrashAlt}
