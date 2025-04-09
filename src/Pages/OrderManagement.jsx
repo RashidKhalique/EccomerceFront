@@ -89,18 +89,20 @@ const OrderManagement = () => {
   };
 
   const deleteOrder = async (id) => {
-    // try {
-    //   const response = await axios.delete(`https://ecommerce-backend-pi-three.vercel.app/api/order/orders/delete/${id}`);
-    //   if (response.data.success) {
-    //     setOrders(orders.filter(order => order.orderId !== id));
-    //   } else {
-    //     setErrorMessage(response.data.message || "Failed to delete order");
-    //   }
-    // } catch (error) {
-    //   setErrorMessage("An error occurred while deleting the order");
-    //   console.error('Error deleting order:', error);
-    // }
-         toast.success("Delete Order Successfully")
+     try {
+      const response = await axios.delete(`https://ecommerce-backend-pi-three.vercel.app/api/order/orders/delete/${id}`);
+       if (response.data.success) {
+        setOrders(orders.filter(order => order.orderId !== id));
+              toast.success("Delete Order Successfully")
+       } else {
+         setErrorMessage(response.data.message || "Failed to delete order");
+              toast.error(response.data.message || "Failed to delete order")
+       }
+     } catch (error) {
+       setErrorMessage("An error occurred while deleting the order");
+       console.error('Error deleting order:', error);
+    }
+    
   };
 
   return (
