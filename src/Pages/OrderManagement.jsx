@@ -146,7 +146,7 @@ console.log("order : ",orders)
                     <FontAwesomeIcon
                       icon={faTrashAlt}
                       className="text-red-500 cursor-pointer"
-                      onClick={() => deleteOrder(order.orderId)}
+                      onClick={() => deleteOrder(order._id)}
                     />
                   </td>
                 </tr>
