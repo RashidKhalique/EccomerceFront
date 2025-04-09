@@ -141,12 +141,12 @@ console.log("order : ",orders)
                     <FontAwesomeIcon
                       icon={faEdit}
                       className="text-blue-500 cursor-pointer"
-                      onClick={() => handleStatusChange(order._id)}
+                      onClick={() => handleStatusChange(order.orderId)}
                     />
                     <FontAwesomeIcon
                       icon={faTrashAlt}
                       className="text-red-500 cursor-pointer"
-                      onClick={() => deleteOrder(order._id)}
+                      onClick={() => deleteOrder(order.orderId)}
                     />
                   </td>
                 </tr>
