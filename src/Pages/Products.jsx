@@ -25,9 +25,9 @@ function Products() {
 
   const deleteProduct = async (id) => {
     try {
-      // await axios.delete(`https://ecommerce-backend-pi-three.vercel.app/api/product/delete/${id}`);
-      // // Filter out the deleted product from the state
-      // setProducts((prevProducts) => prevProducts.filter(product => product._id !== id));
+       await axios.delete(`https://ecommerce-backend-pi-three.vercel.app/api/product/delete/${id}`);
+      // Filter out the deleted product from the state
+       setProducts((prevProducts) => prevProducts.filter(product => product._id !== id));
       toast.success("You Don't Have Acess to delete Products")
     } catch (error) {
       console.error('Error deleting product:', error);
