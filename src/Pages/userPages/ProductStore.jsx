@@ -51,29 +51,29 @@ function ProductStore() {
                     <div className="flex items-center space-x-6 lg:space-x-8">
                       <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                         <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
-                          <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg" alt="" className="h-full w-full object-cover object-center"/>
+                          <img src="https://carmellamarketing.com/wp-content/uploads/2023/05/Screen-Shot-2023-05-09-at-9.50.02-AM-1024x650.png" alt="" className="h-full w-full object-cover object-center"/>
                         </div>
                         <div className="h-64 w-44 overflow-hidden rounded-lg">
-                          <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg" alt="" className="h-full w-full object-cover object-center"/>
-                        </div>
-                      </div>
-                      <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div className="h-64 w-44 overflow-hidden rounded-lg">
-                          <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg" alt="" className="h-full w-full object-cover object-center"/>
-                        </div>
-                        <div className="h-64 w-44 overflow-hidden rounded-lg">
-                          <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg" alt="" className="h-full w-full object-cover object-center"/>
-                        </div>
-                        <div className="h-64 w-44 overflow-hidden rounded-lg">
-                          <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg" alt="" className="h-full w-full object-cover object-center"/>
+                          <img src="https://voyado.com/wp-content/uploads/2022/08/beauty-ecommerce-products.jpg" alt="" className="h-full w-full object-cover object-center"/>
                         </div>
                       </div>
                       <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                         <div className="h-64 w-44 overflow-hidden rounded-lg">
-                          <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg" alt="" className="h-full w-full object-cover object-center"/>
+                          <img src="https://www.autofulfil.com/wp-content/uploads/2020/03/cosmetics.jpg" alt="" className="h-full w-full object-cover object-center"/>
                         </div>
                         <div className="h-64 w-44 overflow-hidden rounded-lg">
-                          <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg" alt="" className="h-full w-full object-cover object-center"/>
+                          <img src="https://digitalmarketingskill.com/wp-content/uploads/2019/01/products-to-sell-online-hair-cosmetics-1.jpg" alt="" className="h-full w-full object-cover object-center"/>
+                        </div>
+                        <div className="h-64 w-44 overflow-hidden rounded-lg">
+                          <img src="https://www.wearedivisa.com/wp-content/uploads/2021/02/consumer-electronics-ecommerce-digital-marketing.jpg" alt="" className="h-full w-full object-cover object-center"/>
+                        </div>
+                      </div>
+                      <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                        <div className="h-64 w-44 overflow-hidden rounded-lg">
+                          <img src="https://aureatelabs.com/wp-content/uploads/2024/11/Choose-your-business-niche.png" alt="" className="h-full w-full object-cover object-center"/>
+                        </div>
+                        <div className="h-64 w-44 overflow-hidden rounded-lg">
+                          <img src="https://www.wearedivisa.com/wp-content/uploads/2021/02/consumer-electronics-ecommerce-digital-marketing.jpg" alt="" className="h-full w-full object-cover object-center"/>
                         </div>
                       </div>
                     </div>
