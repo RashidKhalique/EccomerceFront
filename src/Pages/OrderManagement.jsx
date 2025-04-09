@@ -104,7 +104,7 @@ const OrderManagement = () => {
     }
     
   };
-
+console.log("order : ",orders)
   return (
     <div>
       <Nav />
