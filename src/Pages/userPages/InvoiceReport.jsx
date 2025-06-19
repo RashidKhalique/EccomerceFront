@@ -96,9 +96,9 @@ const InvoiceReport = () => {
               <th className="py-2 px-4 border-b">Total</th>
             </tr>
           </thead>
-          <tbody classname="m-10 p-10">
+          <tbody>
             {Product.map((item, index) => (
-              <tr key={index} className="border-b">
+              <tr key={index} className="border-b text-center">
                 <td className="py-2 px-4">{item.name}</td>
                 <td className="py-2 px-4">${item.price.toFixed(2)}</td>
                 <td className="py-2 px-4">${item.price.toFixed(2)}</td>
