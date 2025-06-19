@@ -96,7 +96,7 @@ const InvoiceReport = () => {
               <th className="py-2 px-4 border-b">Total</th>
             </tr>
           </thead>
-          <tbody classname="flex items-center justify-between">
+          <tbody classname="m-10 p-10">
             {Product.map((item, index) => (
               <tr key={index} className="border-b">
                 <td className="py-2 px-4">{item.name}</td>
