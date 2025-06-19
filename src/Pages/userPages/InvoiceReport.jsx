@@ -104,21 +104,21 @@ const InvoiceReport = () => {
                 <td className="py-2 px-4">${item.price.toFixed(2)}</td>
               </tr>
             ))}
-            <tr className="text-center">
-              <td className="py-2 px-4 font-semibold" colSpan="2">Subtotal</td>
-              <td className="py-2 px-4">${subtotal.toFixed(2)}</td>
+            <tr >
+              <td className="py-6 px-8 font-semibold" colSpan="2">Subtotal</td>
+              <td className="py-6 px-8">${subtotal.toFixed(2)}</td>
             </tr>
-            <tr className="text-center">
-              <td className="py-2 px-4 font-semibold" colSpan="2">Tax (10%)</td>
-              <td className="py-2 px-4">${tax.toFixed(2)}</td>
+            <tr>
+              <td className="py-6 px-8 font-semibold" colSpan="2">Tax (10%)</td>
+              <td className="py-6 px-8">${tax.toFixed(2)}</td>
             </tr>
-            <tr className="text-center">
-              <td className="py-2 px-4 font-semibold" colSpan="2">Delivery Pricing</td>
-              <td className="py-2 px-4">${DeliveryPricing.toFixed(2)}</td>
+            <tr >
+              <td className="py-6 px-8 font-semibold" colSpan="2">Delivery Pricing</td>
+              <td className="py-6 px-8">${DeliveryPricing.toFixed(2)}</td>
             </tr>
-            <tr className="text-center">
-              <td className="py-2 px-4 font-semibold" colSpan="2">Total</td>
-              <td className="py-2 px-4 text-lg font-bold">${total.toFixed(2)}</td>
+            <tr>
+              <td className="py-6 px-8 font-semibold" colSpan="2">Total</td>
+              <td className="py-6 px-8 text-lg font-bold">${total.toFixed(2)}</td>
             </tr>
           </tbody>
         </table>
