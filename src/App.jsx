@@ -20,7 +20,7 @@ import CouponManager from './Pages/CouponManager.jsx'
 import Portfolio from './Pages/portfolio.jsx'
 import NotFoundPage from './Pages/userPages/NotFoundPage.jsx'
 import Invoice from './Pages/userPages/InvoiceReport.jsx'
-
+import AddToCart from './Components/AddToCart.jsx'
 function App() {
 
     return (
@@ -36,7 +36,8 @@ function App() {
                 <Route path='/updateUser/:id' element={<UpdateUser />} />
                 <Route path='/Invoice/:id' element={<Invoice/>} />
                 <Route path='/portfolio' element={<Portfolio />} />
-
+                <Route path='/po' element={<AddToCart/>} />
+               
 
                 <Route path='/PaymentSuccess/:id' element={
                     <PaymentSuccess />

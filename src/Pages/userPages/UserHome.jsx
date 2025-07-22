@@ -5,28 +5,9 @@ import UserHeader from '../../UserHeader';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from '../../footer';
+import AddToCart from '../../Components/AddToCart';
 
 function UserHome() {
-  const Addtocart = (product) => {
-    let cart;
-    try {
-      const storedCart = localStorage.getItem('cart');
-      cart = storedCart ? JSON.parse(storedCart) : [];
-    } catch (error) {
-      console.error('Error parsing cart from local storage:', error);
-      cart = [];
-    }
-
-    const productExists = cart.find((item) => item._id === product._id);
-
-    if (!productExists) {
-      cart.push(product);
-      localStorage.setItem('cart', JSON.stringify(cart));
-      toast.success(`${product.name} added to cart!`);
-    } else {
-      toast.info(`${product.name} is already in the cart.`);
-    }
-  };
 
   const heroImage = 'https://images.unsplash.com/photo-1556227834-09f1de7a7d14';
   const categories = [
@@ -38,26 +19,12 @@ function UserHome() {
   ];
 
   const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get('https://ecommerce-backend-pi-three.vercel.app/api/product/show');
-        setProducts(response.data.existProduct || []);
-      } catch (error) {
-        console.error('Error fetching products:', error);
-      }
-    };
-
-    fetchProducts();
-  }, []);
-
   const navigate = useNavigate();
 
   return (
     <div>
       <UserHeader />
-      
+    
       {/* Hero Section */}
       <section className="flex flex-col lg:flex-row items-center justify-between bg-gray-100 px-6 py-10 lg:px-20 ">
         <div className="lg:w-1/2 text-center lg:text-left">
@@ -79,42 +46,8 @@ function UserHome() {
         </div>
       </section>
 
-      {/* Products Section */}
-      <section className="py-10 bg-gray-50">
-        <h2 className="text-3xl font-bold text-center mb-6">Featured Products</h2>
-        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {products.map((product, index) => (
-            index <= 7 ? (
-              <div
-                key={product._id}
-                className="bg-white border rounded-lg p-4 shadow hover:shadow-lg transition relative flex flex-col"
-                onClick={() => navigate(`/product/${product._id}`)}
-              >
-                <img src={product.imageurl} alt={product.name} className="w-full h-40 object-cover rounded-md mb-4" />
-                <h3 className="text-lg font-semibold">{product.name}</h3>
-                <div className='flex gap-1 text-center items-center mb-4 justify-between'>
-                  <h6 className="text-base text-gray-600 font-semibold">
-                    ${product.discount >= 0 ? (product.price - (product.price * product.discount / 100)).toFixed(2) : product.price.toFixed(2)}
-                  </h6>
-                  {product.discount > 0 && (
-                    <span className="text-red-500 text-sm">
-                      <del>${product.price.toFixed(2)}</del>
-                    </span>
-                  )}
-                  <div className="mt-auto flex gap-4">
-                    <span className="cursor-pointer p-2 hover:bg-gray-200 rounded-full transition">
-                      <i className="fas fa-shopping-cart text-gray-700" onClick={(e) => { e.stopPropagation(); Addtocart(product); }}></i>
-                    </span>
-                    <span className="cursor-pointer p-2 hover:bg-gray-200 rounded-full transition">
-                      <i className="fas fa-heart text-gray-700"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            ) : null
-          ))}
-        </div>
-      </section>
+          <AddToCart/>
+
 
       {/* Promotional Section */}
       <div className="relative overflow-hidden bg-white">
