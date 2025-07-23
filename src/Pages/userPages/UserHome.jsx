@@ -8,7 +8,7 @@ import Footer from '../../footer';
 import AddToCart from '../../Components/AddToCart';
 import Category from '../../Components/Category';
 import PromotionalSection from '../../Components/PromotionalSection';
-import Testimonial from '../../Components/testimonial';
+import Testimonial from '../../Components/Testimonial'
 
 function UserHome() {
 
