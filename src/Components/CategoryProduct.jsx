@@ -53,7 +53,7 @@ const CategoryProduct = () => {
     <>
       {products.map((product) =>
         product.category === id ? (
-                <div key={product._id} className="relative p-4 flex w-full max-w-xs flex-col overflow-hidden rounded-sm border border-gray-100 bg-white shadow-md" onClick={navigate(`/product/${product._id}`)}>
+                <div key={product._id} className="relative p-4 flex w-full max-w-xs flex-col overflow-hidden rounded-sm border border-gray-100 bg-white shadow-md" onClick={()=>{navigate(`/product/${product._id}`)}}>
                 <a className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl text-center" href="#">
                   <img className="w-full object-cover rounded-md mb-4" src={product.imageurl} alt={product.name} />
                   {product.discount > 0 && (
