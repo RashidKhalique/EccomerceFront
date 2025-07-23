@@ -6,17 +6,11 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from '../../footer';
 import AddToCart from '../../Components/AddToCart';
+import Category from '../../Components/Category';
 
 function UserHome() {
 
   const heroImage = 'https://images.unsplash.com/photo-1556227834-09f1de7a7d14';
-  const categories = [
-    { name: 'Electronic Gadget', image: 'https://images.unsplash.com/photo-1618166080964-cdb5843979b0' },
-    { name: 'Beauty & Makeup', image: 'https://images.unsplash.com/photo-1588186941286-724357304676' },
-    { name: 'Home Stationary', image: 'https://images.unsplash.com/photo-1509937528035-ad76254b0356' },
-    { name: 'Shoes', image: 'https://images.unsplash.com/photo-1700853010051-dce31802dafc' },
-    { name: 'Peonic', image: 'https://plus.unsplash.com/premium_photo-1661413255121-aca7debee44d' },
-  ];
 
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
@@ -104,17 +98,7 @@ function UserHome() {
       </div>
 
       {/* Categories Section */}
-      <section className="py-10 bg-gray-50">
-        <h2 className="text-3xl font-bold text-center mb-6">Categories</h2>
-        <div className="container mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
-          {categories.map((category) => (
-            <div key={category.name} className="bg-white border rounded-lg p-4 flex flex-col items-center" onClick={() => navigate(`/category/${category.name}`)}>
-              <img src={category.image} alt={category.name} className="w-full h-64 object-cover rounded-md mb-4" />
-              <h3 className="text-lg font-semibold">{category.name}</h3>
-            </div>
-          ))}
-        </div>
-      </section>
+     <Category/>
 
       {/* Testimonials Section */}
       <section className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
