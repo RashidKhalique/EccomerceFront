@@ -35,8 +35,6 @@ function App() {
                 <Route path='/ProductStore' element={<ProductStore />} />
                 <Route path='/updateUser/:id' element={<UpdateUser />} />
                 <Route path='/Invoice/:id' element={<Invoice/>} />
-                <Route path='/portfolio' element={<Portfolio />} />
-                <Route path='/po' element={<AddToCart/>} />
                
 
                 <Route path='/PaymentSuccess/:id' element={
