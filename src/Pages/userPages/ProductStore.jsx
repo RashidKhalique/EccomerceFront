@@ -5,6 +5,7 @@ import { Navigate, useNavigate } from 'react-router-dom';
 import Footer from '../../footer';
 import { toast ,ToastContainer } from 'react-toastify';
 import PromotionalSection from '../../Components/PromotionalSection';
+import AddToCart from '../../Components/AddToCart';
 
 
 function ProductStore() {
@@ -30,7 +31,7 @@ function ProductStore() {
       <section className="py-10 bg-gray-50">
         <h2 className="text-3xl font-bold text-center mb-6">All Products</h2>   
         <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-         <Addtocart value={products.length}/>
+         <AddToCart value={products.length}/>
         </div>
       </section>
       <Footer/>
